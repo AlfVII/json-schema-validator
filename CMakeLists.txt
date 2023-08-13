@@ -79,10 +79,6 @@ endif ()
 #                                       External packages                                       #
 ]==============================================================================================]
 
-set(fetch_packages "")
-# Fetch/Find nlohmann_json
-# TODO: Remove when bumping cmake >= 3.24
-
 
 # Handle configure flags
 if (JSON_VALIDATOR_INSTALL)
