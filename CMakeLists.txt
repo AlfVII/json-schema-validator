@@ -46,6 +46,15 @@ set(JSON_FETCH_VERSION ${JSON_FETCH_VERSION_DEFAULT} CACHE STRING "Fetch nlohman
 #[==============================================================================================[
 #                                     Project configuration                                     #
 ]==============================================================================================]
+set(fetch_packages "")
+# Fetch/Find nlohmann_json
+# TODO: Remove when bumping cmake >= 3.24
+FetchContent_Declare(nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json
+    GIT_TAG ${JSON_FETCH_VERSION}
+    FIND_PACKAGE_ARGS
+    )
+list(APPEND fetch_packages nlohmann_json)
 
 # Include cmake modules
 include(FetchContent)
